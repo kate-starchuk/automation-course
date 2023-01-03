@@ -5,9 +5,9 @@
 Для отримання слова для аналізу скористайтеся константою або функцією input().
 '''
 
-# template = 'Word {} has {} letters'
-# word = input('Print word ')
-# print(template.format(word, len(word)))
+template = 'Word {} has {} letters'
+word = input('Print word ')
+print(template.format(word, len(word)))
 
 '''Напишіть программу "Касир в кінотеватрі", яка попросіть користувача ввести свсвій вік (можно використати константу
 або функцію input(), на екран має бути виведено лише одне повідомлення, також подумайте над варіантами, коли введені невірні дані).
