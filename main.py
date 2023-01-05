@@ -19,19 +19,28 @@ print(template.format(word, len(word)))
 '''
 
 print('\"Касир в кінотеатрі\"')
-
-try:
-    age = float(input('Введіть свій вік '))
-
-    if '7' in str(age):
-        print('Вам сьогодні пощастить!')
-    elif age < 7:
-        print("Де твої батьки?")
-    elif age < 16:
-        print('Це фільм для дорослих!')
-    elif age > 65:
-        print('Покажіть пенсійне посвідчення!')
+age = ''
+while True:
+    try:
+        age = int(input('Скільки вам повних років? '))
+        if age > 122:
+            print('Ви найстарша людина на землі? Якщо ні, то введіть свій реальний вік')
+            continue
+        if age < 1:
+            print('Введіть свій реальний вік')
+            continue
+    except ValueError:
+        print("Будь ласка, введіть число")
+        continue
     else:
-        print('А білетів вже немає!')
-except ValueError:
-    print('Ввід не правильний.')
+        break
+if '7' in str(age):
+    print('Вам сьогодні пощастить!')
+elif age < 7:
+    print("Де твої батьки?")
+elif age < 16:
+    print('Це фільм для дорослих!')
+elif age > 65:
+    print('Покажіть пенсійне посвідчення!')
+else:
+    print('А білетів вже немає!')
