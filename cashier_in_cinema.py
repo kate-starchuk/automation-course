@@ -10,7 +10,7 @@ import time
 
 
 def timeit(func):
-    @wraps(func)
+    # @wraps(func)
     def timeit_wrapper(*args, **kwargs):
         start_time = time.perf_counter()
         result = func(*args, **kwargs)
