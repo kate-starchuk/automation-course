@@ -1,18 +1,32 @@
 class Company:
+    """
+    Describes the basic company characteristics
+    """
     def __init__(self, name: str, employees_amount: int, company_type: str):
+        """
+        Args:
+            name:
+            employees_amount:
+            company_type:
+        """
         self.name = name
         self.employees_amount = employees_amount
         self.company_type = company_type
 
-    def get_name(self):
+    def get_name(self) -> str:
         """
-        Returns: name of the company
+        Get  name of the company
+        Returns:
+            self.name: company name
         """
         return self.name
 
-    def get_company_type(self):
+    def get_company_type(self) -> str:
         """
-        Returns: type of the company
+        Get type of the company
+
+        Returns:
+            self.company_type: type of the company
         """
         return self.company_type
 
@@ -22,9 +36,12 @@ class Company:
         """
         self.employees_amount = self.employees_amount + 1
 
-    def get_employees_amount(self):
+    def get_employees_amount(self) -> int:
         """
-        Returns: employees amount
+        Get employees amount
+
+        Returns:
+            self.employees_amount: amount of the employees
         """
         return self.employees_amount
 
