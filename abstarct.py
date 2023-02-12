@@ -8,23 +8,23 @@ class Gadget(ABC):
     def __init__(self, weight: int, price: float):
         """
         Args:
-            weight:
-            price:
+            weight: weight of the gadget in gr
+            price: price of the gadget in usa dollars
         """
         self.weight = weight
         self.price = price
 
-    def turn_on(self):
+    def turn_on(self) -> str:
         """
         Turns on the gadget
         """
-        print('turn_on')
+        return 'turn_on'
 
-    def turn_off(self):
+    def turn_off(self) -> str:
         """
         Turns off the gadget
         """
-        print('turn_off')
+        return 'turn_off'
 
     @abstractmethod
     def recharge(self):
@@ -35,25 +35,27 @@ class Tablet(Gadget):
     """
     Tablet class describe tablet basic characteristics
     """
-    def __init__(self, weight: int, price: float):
+    def __init__(self, weight: int, price: float, screen_resolution: str):
         """
         Args:
-            weight:
-            price:
+            weight: weight of the tablet in gr
+            price: price of the tablet in usa dollars
+            screen_resolution
         """
         super().__init__(weight, price)
+        self.screen_resolution = screen_resolution
 
-    def recharge(self):
+    def recharge(self) -> str:
         """
          Recharges the tablet
         """
-        print("Charging")
+        return "Charging"
 
-    def __upload_of_system_components(self):
+    def __upload_of_system_components(self) -> str:
         """
         Uploads system components
         """
-        print('Uploading of the system components')
+        return 'Uploading of the system components'
 
     def preproduction_setup(self):
         """
@@ -66,17 +68,18 @@ class Laptop(Gadget):
     """
     Laptop class describe laptop basic characteristics
     """
-    def __init__(self, weight: int, price: float):
+    def __init__(self, weight: int, price: float, keyboard: str):
         """
         Args:
-            weight:
-            price:
+            weight: weight of the laptop in gr
+            price: price of the laptop in usa dollars
         """
         super().__init__(weight, price)
+        self.keyboard = keyboard
 
-    def recharge(self):
+    def recharge(self) -> str:
         """
         Recharges the laptop
         """
-        print("Charging is started")
+        return "Charging is started"
 
