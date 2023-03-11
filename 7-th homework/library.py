@@ -1,5 +1,5 @@
 
-def get_declension_coins(arg: str) -> str:
+def get_declension_kopiyka(arg: str) -> str:
     if 11 <= int(arg) <= 19:
         return 'копійок'
     elif arg[-1] == '1':
@@ -10,7 +10,7 @@ def get_declension_coins(arg: str) -> str:
         return 'копійок'
 
 
-def get_declension_hryvnia(arg):
+def get_declension_hryvnia(arg: str) -> str:
     if 11 <= int(arg) <= 19:
         return 'гривень'
     elif arg[-1] == '1':
@@ -33,23 +33,16 @@ def separate_number(num: float) -> str:
     rounded_num = round(num, 2)
     whole_part = str(int(num))
     fraction_part = str(rounded_num).split(".")[1]
-    return ' '.join([whole_part, get_declension_hryvnia(whole_part), fraction_part, get_declension_coins(fraction_part)])
+    return ' '.join([whole_part, get_declension_hryvnia(whole_part), fraction_part, get_declension_kopiyka(fraction_part)])
 
 
-def is_hot_today(temperature=30) -> str:
-    if temperature > 25:
-        return "жарко"
-    else:
-        return "холодно"
+def is_hot_today(temperature: int = 30) -> bool:
+    return temperature >= 25
 
 
 def get_valid_number(message="Введіть число") -> float:
     """
-    this function is basically a cycle fr getting expected input from a user
-    Args:
-        message:
-
-    Returns:
+    this function is basically a cycle for getting expected input from a user
 
     """
     while True:

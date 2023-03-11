@@ -1,4 +1,4 @@
-from library import get_declension_coins, get_declension_hryvnia, separate_number
+from library import get_declension_kopiyka, get_declension_hryvnia, separate_number
 
 
 def print_amount():
