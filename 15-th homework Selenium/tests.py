@@ -3,6 +3,7 @@ from time import sleep
 from selenium.webdriver import Chrome, Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webelement import WebElement
+from selenium import webdriver
 
 
 def test_1():
@@ -15,6 +16,7 @@ def test_1():
     sleep(1)
     first_list_item: WebElement = driver.find_element(By.XPATH, first_list_item_locator)
     first_list_item.click()
-    driver.find_element(By.TAG_NAME, 'body').send_keys(Keys.PAGE_DOWN)
+    sleep(1)
+    driver.execute_script("window.scrollTo(0,document.body.scrollHeight)")
     sleep(3)
     driver.quit()
